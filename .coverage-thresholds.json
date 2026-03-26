@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "ColdWatch": {
+      "lineCoverage": 0.80,
+      "files": {
+        "SessionViewModel.swift": 0.85,
+        "IceBathSession.swift": 0.90,
+        "MockTemperatureProvider.swift": 0.90
+      }
+    },
+    "Shared": {
+      "lineCoverage": 0.85
+    }
+  },
+  "overall": {
+    "lineCoverage": 0.80
+  }
+}

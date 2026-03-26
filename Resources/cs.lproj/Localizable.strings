@@ -1,0 +1,21 @@
+/* App */
+"app_name" = "Cold";
+
+/* iPhone companion */
+"session_history_placeholder" = "Historie sezení brzy.";
+
+/* Watch — main screen */
+"start_session" = "START";
+"stop_session" = "STOP";
+"temperature_unit" = "°C";
+"elapsed_time_label" = "Čas";
+"temperature_label" = "Teplota";
+
+/* Watch — summary screen */
+"summary_title" = "Souhrn";
+"summary_duration" = "Délka";
+"summary_min_temp" = "Min";
+"summary_max_temp" = "Max";
+"summary_avg_temp" = "Průměr";
+"summary_done" = "Hotovo";
+"summary_no_data" = "—";

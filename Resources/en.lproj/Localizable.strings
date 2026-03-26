@@ -1,0 +1,21 @@
+/* App */
+"app_name" = "Cold";
+
+/* iPhone companion */
+"session_history_placeholder" = "Session history coming soon.";
+
+/* Watch — main screen */
+"start_session" = "START";
+"stop_session" = "STOP";
+"temperature_unit" = "°C";
+"elapsed_time_label" = "Time";
+"temperature_label" = "Temp";
+
+/* Watch — summary screen */
+"summary_title" = "Summary";
+"summary_duration" = "Duration";
+"summary_min_temp" = "Min";
+"summary_max_temp" = "Max";
+"summary_avg_temp" = "Avg";
+"summary_done" = "Done";
+"summary_no_data" = "—";
