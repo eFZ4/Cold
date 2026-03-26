@@ -31,6 +31,10 @@ targets:
       - path: Resources
     entitlements:
       path: iPhoneApp/iPhoneApp.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.cold.shared
+        com.apple.developer.healthkit: true
     info:
       path: iPhoneApp/Info.plist
       properties:
@@ -59,6 +63,13 @@ targets:
       - path: Resources
     entitlements:
       path: WatchApp/WatchApp.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.cold.shared
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access:
+          - health-records
+        com.apple.background-task-scheduler: true
     info:
       path: WatchApp/Info.plist
       properties:

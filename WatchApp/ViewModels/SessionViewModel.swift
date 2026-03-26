@@ -24,6 +24,7 @@ final class SessionViewModel {
 
     private let temperatureProvider: any TemperatureProviding
     private let runtimeManager: any ExtendedRuntimeManaging
+    private let healthKitManager: any HealthKitManaging
     private let tickInterval: Duration
 
     private var timerTask: Task<Void, Never>?
@@ -38,10 +39,12 @@ final class SessionViewModel {
     init(
         temperatureProvider: any TemperatureProviding,
         runtimeManager: any ExtendedRuntimeManaging,
+        healthKitManager: any HealthKitManaging = HealthKitManager(),
         tickInterval: Duration = .seconds(1)
     ) {
         self.temperatureProvider = temperatureProvider
         self.runtimeManager = runtimeManager
+        self.healthKitManager = healthKitManager
         self.tickInterval = tickInterval
     }
 
@@ -51,6 +54,10 @@ final class SessionViewModel {
         guard case .idle = state else { return }
         sessionStart = Date()
         temperatureReadings = []
+
+        Task { [weak self] in
+            try? await self?.healthKitManager.requestAuthorization()
+        }
 
         runtimeManager.start()
         startTimerLoop()
@@ -71,6 +78,11 @@ final class SessionViewModel {
             duration: duration,
             temperatureReadings: temperatureReadings
         )
+
+        Task { [weak self] in
+            try? await self?.healthKitManager.saveSession(session)
+        }
+
         state = .summary(session)
     }
 
