@@ -10,12 +10,17 @@
 		0147973C6DBE4BDE43AE5601 /* ColdWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8FD85B904BBB590EDD235134 /* ColdWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		07696B2C7403147159CC0B66 /* SessionSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0A4BCF0B56427C1D4D581 /* SessionSummaryView.swift */; };
 		182C6E2B8F4D8015AB01B436 /* IceBathSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6E100F86B0A00BDCA999E /* IceBathSession.swift */; };
+		1BC4ADDBC493FDC54E473F4F /* HealthKitManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9B142AFCCFD1AE63C5F67 /* HealthKitManagerProtocol.swift */; };
+		20712B301D17052F1EEA69E2 /* MockHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2FDC5DEACC12444786370 /* MockHealthKitManager.swift */; };
+		28BB455821063D2E64D3064B /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0186FBC30FD1B6378E74F00 /* HealthKitManager.swift */; };
 		381EC4AD8F16B7664E9AD4FC /* ExtendedRuntimeManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887051D261AD88933996826 /* ExtendedRuntimeManaging.swift */; };
 		3CDA850BAE38429BC254AEC8 /* ExtendedRuntimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD977B966136C8B2D1F0E015 /* ExtendedRuntimeManager.swift */; };
 		41E58AB43E2F9FF1194228B4 /* ColdApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BBF4387FD43A1AFC2CC60B /* ColdApp.swift */; };
 		4584EFA450670B359185A148 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06634B296AD4A9ED7AB78AC0 /* ContentView.swift */; };
+		4620EC794A7D87272847B639 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0186FBC30FD1B6378E74F00 /* HealthKitManager.swift */; };
 		4946831420971EB5D95652B4 /* IceBathSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6E100F86B0A00BDCA999E /* IceBathSession.swift */; };
 		5B7F314E5599042DC513818B /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92E7A0C9E1CC22EB09B9378 /* SessionViewModel.swift */; };
+		5F36C2EF73B8DA09420F89FD /* MockHealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2FDC5DEACC12444786370 /* MockHealthKitManager.swift */; };
 		625078DABF22BBC84C8FB083 /* MockExtendedRuntimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42E52CC6DFD3F39C4C2B92F /* MockExtendedRuntimeManager.swift */; };
 		6293AD703DC0C6D9260145A3 /* TemperatureProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E123BA7ECE7FC390F7CA43 /* TemperatureProviding.swift */; };
 		6624E99E13EF4EE4AD66F823 /* ColdWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C0D1DF940E516C86D000A /* ColdWatchApp.swift */; };
@@ -23,6 +28,7 @@
 		932A67662EEA8530FB999298 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D186B3B757235000554B2464 /* ContentView.swift */; };
 		95915C58C2FCD0812FC8568C /* PlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E86FFEA6F05A6D1395B48F /* PlaceholderTests.swift */; };
 		9B1A2052CC26F984F47B56C0 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE9A727111F484B4EE6ECF /* AppGroup.swift */; };
+		A50151C02827EEA5357512A2 /* HealthKitManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9B142AFCCFD1AE63C5F67 /* HealthKitManagerProtocol.swift */; };
 		AA720AE461FE41AA9EF77801 /* TemperatureProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D60681483041117E5860 /* TemperatureProviderFactory.swift */; };
 		AFA625A660839930EA5809B0 /* TemperatureProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883846F4B80E4045AD33E0A6 /* TemperatureProviderTests.swift */; };
 		AFFAFD16B0EE5D0CF392F633 /* IceBathSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D3EFBC78A8EF405507961F /* IceBathSessionTests.swift */; };
@@ -70,6 +76,7 @@
 		6214ABDF6265DC226878DBD0 /* iPhoneApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iPhoneApp.entitlements; sourceTree = "<group>"; };
 		63E86FFEA6F05A6D1395B48F /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
 		67D3EFBC78A8EF405507961F /* IceBathSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceBathSessionTests.swift; sourceTree = "<group>"; };
+		72E2FDC5DEACC12444786370 /* MockHealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHealthKitManager.swift; sourceTree = "<group>"; };
 		80D8570AE441A1759F0E4676 /* MockTemperatureProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTemperatureProvider.swift; sourceTree = "<group>"; };
 		82A6E100F86B0A00BDCA999E /* IceBathSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceBathSession.swift; sourceTree = "<group>"; };
 		883846F4B80E4045AD33E0A6 /* TemperatureProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureProviderTests.swift; sourceTree = "<group>"; };
@@ -82,9 +89,11 @@
 		A92E7A0C9E1CC22EB09B9378 /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		B1BBF4387FD43A1AFC2CC60B /* ColdApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColdApp.swift; sourceTree = "<group>"; };
 		B66A9F3F74ED11B432B0DC66 /* CMWaterSubmersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMWaterSubmersionProvider.swift; sourceTree = "<group>"; };
+		C0186FBC30FD1B6378E74F00 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		CD977B966136C8B2D1F0E015 /* ExtendedRuntimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedRuntimeManager.swift; sourceTree = "<group>"; };
 		D186B3B757235000554B2464 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D1E123BA7ECE7FC390F7CA43 /* TemperatureProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureProviding.swift; sourceTree = "<group>"; };
+		D2E9B142AFCCFD1AE63C5F67 /* HealthKitManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManagerProtocol.swift; sourceTree = "<group>"; };
 		DAF0A4BCF0B56427C1D4D581 /* SessionSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSummaryView.swift; sourceTree = "<group>"; };
 		DBAD8AB384BD6BAAA90DB186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E42E52CC6DFD3F39C4C2B92F /* MockExtendedRuntimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExtendedRuntimeManager.swift; sourceTree = "<group>"; };
@@ -130,6 +139,16 @@
 			path = WatchApp;
 			sourceTree = "<group>";
 		};
+		59E6D0C4BC9D841F26A6C064 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				C0186FBC30FD1B6378E74F00 /* HealthKitManager.swift */,
+				D2E9B142AFCCFD1AE63C5F67 /* HealthKitManagerProtocol.swift */,
+				72E2FDC5DEACC12444786370 /* MockHealthKitManager.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
 		637EF650B82278B630E0EC1C /* ColdTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4076C0471A385FB5D44DD53C /* Constants */,
+				59E6D0C4BC9D841F26A6C064 /* HealthKit */,
 				19901A7F11C46A64F8479DAE /* Models */,
 			);
 			path = Shared;
@@ -326,7 +346,10 @@
 				9B1A2052CC26F984F47B56C0 /* AppGroup.swift in Sources */,
 				41E58AB43E2F9FF1194228B4 /* ColdApp.swift in Sources */,
 				4584EFA450670B359185A148 /* ContentView.swift in Sources */,
+				28BB455821063D2E64D3064B /* HealthKitManager.swift in Sources */,
+				1BC4ADDBC493FDC54E473F4F /* HealthKitManagerProtocol.swift in Sources */,
 				4946831420971EB5D95652B4 /* IceBathSession.swift in Sources */,
+				20712B301D17052F1EEA69E2 /* MockHealthKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +363,10 @@
 				932A67662EEA8530FB999298 /* ContentView.swift in Sources */,
 				3CDA850BAE38429BC254AEC8 /* ExtendedRuntimeManager.swift in Sources */,
 				381EC4AD8F16B7664E9AD4FC /* ExtendedRuntimeManaging.swift in Sources */,
+				4620EC794A7D87272847B639 /* HealthKitManager.swift in Sources */,
+				A50151C02827EEA5357512A2 /* HealthKitManagerProtocol.swift in Sources */,
 				182C6E2B8F4D8015AB01B436 /* IceBathSession.swift in Sources */,
+				5F36C2EF73B8DA09420F89FD /* MockHealthKitManager.swift in Sources */,
 				FC5785CEFE00FF99E7DEB85D /* MockTemperatureProvider.swift in Sources */,
 				07696B2C7403147159CC0B66 /* SessionSummaryView.swift in Sources */,
 				5B7F314E5599042DC513818B /* SessionViewModel.swift in Sources */,
