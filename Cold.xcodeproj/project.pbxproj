@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0147973C6DBE4BDE43AE5601 /* ColdWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8FD85B904BBB590EDD235134 /* ColdWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		07696B2C7403147159CC0B66 /* SessionSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0A4BCF0B56427C1D4D581 /* SessionSummaryView.swift */; };
 		182C6E2B8F4D8015AB01B436 /* IceBathSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6E100F86B0A00BDCA999E /* IceBathSession.swift */; };
 		381EC4AD8F16B7664E9AD4FC /* ExtendedRuntimeManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887051D261AD88933996826 /* ExtendedRuntimeManaging.swift */; };
 		3CDA850BAE38429BC254AEC8 /* ExtendedRuntimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD977B966136C8B2D1F0E015 /* ExtendedRuntimeManager.swift */; };
@@ -84,6 +85,7 @@
 		CD977B966136C8B2D1F0E015 /* ExtendedRuntimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedRuntimeManager.swift; sourceTree = "<group>"; };
 		D186B3B757235000554B2464 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D1E123BA7ECE7FC390F7CA43 /* TemperatureProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureProviding.swift; sourceTree = "<group>"; };
+		DAF0A4BCF0B56427C1D4D581 /* SessionSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSummaryView.swift; sourceTree = "<group>"; };
 		DBAD8AB384BD6BAAA90DB186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E42E52CC6DFD3F39C4C2B92F /* MockExtendedRuntimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExtendedRuntimeManager.swift; sourceTree = "<group>"; };
 		F7AE9A727111F484B4EE6ECF /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D186B3B757235000554B2464 /* ContentView.swift */,
+				DAF0A4BCF0B56427C1D4D581 /* SessionSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				381EC4AD8F16B7664E9AD4FC /* ExtendedRuntimeManaging.swift in Sources */,
 				182C6E2B8F4D8015AB01B436 /* IceBathSession.swift in Sources */,
 				FC5785CEFE00FF99E7DEB85D /* MockTemperatureProvider.swift in Sources */,
+				07696B2C7403147159CC0B66 /* SessionSummaryView.swift in Sources */,
 				5B7F314E5599042DC513818B /* SessionViewModel.swift in Sources */,
 				AA720AE461FE41AA9EF77801 /* TemperatureProviderFactory.swift in Sources */,
 				6293AD703DC0C6D9260145A3 /* TemperatureProviding.swift in Sources */,

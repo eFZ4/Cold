@@ -26,14 +26,12 @@ final class SessionViewModel {
     private let runtimeManager: any ExtendedRuntimeManaging
     private let tickInterval: Duration
 
-    // nonisolated(unsafe): timerTask is accessed in deinit which is nonisolated in Swift 6.
-    nonisolated(unsafe) private var timerTask: Task<Void, Never>?
-    nonisolated(unsafe) private var tempTask: Task<Void, Never>?
+    private var timerTask: Task<Void, Never>?
+    private var tempTask: Task<Void, Never>?
 
     // Accumulated during an active session
     private var sessionStart: Date?
     private var temperatureReadings: [TemperatureReading] = []
-    private var latestTemp: Double = 0.0
 
     // MARK: - Init
 
@@ -45,11 +43,6 @@ final class SessionViewModel {
         self.temperatureProvider = temperatureProvider
         self.runtimeManager = runtimeManager
         self.tickInterval = tickInterval
-    }
-
-    deinit {
-        timerTask?.cancel()
-        tempTask?.cancel()
     }
 
     // MARK: - Actions
@@ -90,20 +83,21 @@ final class SessionViewModel {
 
     private func startTimerLoop() {
         let start = sessionStart ?? Date()
-        timerTask = Task { [weak self] in
-            guard let self else { return }
+        timerTask = Task { [weak self, tickInterval] in
+            // Check self on every iteration — loop exits naturally when self deallocates
             while !Task.isCancelled {
+                guard let self else { return }
                 let elapsed = Date().timeIntervalSince(start)
                 let temp = await self.temperatureProvider.currentTemperature()
                 await MainActor.run {
-                    if case .active = self.state {
+                    switch self.state {
+                    case .idle, .active:
                         self.state = .active(elapsed: elapsed, currentTemp: temp)
-                    } else if case .idle = self.state {
-                        // First tick: transition to active
-                        self.state = .active(elapsed: elapsed, currentTemp: temp)
+                    case .summary:
+                        break
                     }
                 }
-                try? await Task.sleep(for: self.tickInterval)
+                try? await Task.sleep(for: tickInterval)
             }
         }
     }
@@ -113,12 +107,9 @@ final class SessionViewModel {
             guard let self else { return }
             for await celsius in self.temperatureProvider.temperatureStream() {
                 if Task.isCancelled { break }
-                await MainActor.run {
-                    self.latestTemp = celsius
-                    self.temperatureReadings.append(
-                        TemperatureReading(timestamp: Date(), celsius: celsius)
-                    )
-                }
+                self.temperatureReadings.append(
+                    TemperatureReading(timestamp: Date(), celsius: celsius)
+                )
             }
         }
     }
