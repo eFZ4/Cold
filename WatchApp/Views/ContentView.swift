@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var viewModel: SessionViewModel
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         switch viewModel.state {
@@ -11,7 +12,15 @@ struct ContentView: View {
             ActiveSessionView(
                 elapsed: elapsed,
                 currentTemp: currentTemp,
-                onStop: { viewModel.stop() }
+                onStop: {
+                    viewModel.stop()
+                    // Persist the completed session immediately after stop()
+                    // stop() transitions state synchronously, so session is available now
+                    if case let .summary(session) = viewModel.state {
+                        modelContext.insert(session)
+                        try? modelContext.save()
+                    }
+                }
             )
         case let .summary(session):
             SessionSummaryView(
