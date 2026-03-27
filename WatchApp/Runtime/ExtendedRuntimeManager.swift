@@ -9,16 +9,22 @@ final class ExtendedRuntimeManager: NSObject, ExtendedRuntimeManaging,
     private var session: WKExtendedRuntimeSession?
 
     func start() {
+        #if targetEnvironment(simulator)
+        return  // WKExtendedRuntimeSession is not supported in the simulator
+        #else
         guard session == nil else { return }
         let s = WKExtendedRuntimeSession()
         s.delegate = self
         s.start()
         session = s
+        #endif
     }
 
     func stop() {
+        #if !targetEnvironment(simulator)
         session?.invalidate()
         session = nil
+        #endif
     }
 
     // MARK: - WKExtendedRuntimeSessionDelegate
