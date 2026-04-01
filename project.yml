@@ -31,6 +31,10 @@ targets:
       - path: Resources
     entitlements:
       path: iPhoneApp/iPhoneApp.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.cold.shared
+        com.apple.developer.healthkit: true
     info:
       path: iPhoneApp/Info.plist
       properties:
@@ -59,10 +63,18 @@ targets:
       - path: Resources
     entitlements:
       path: WatchApp/WatchApp.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.cold.shared
+        com.apple.developer.healthkit: true
+        com.apple.developer.healthkit.access:
+          - health-records
+        com.apple.background-task-scheduler: true
     info:
       path: WatchApp/Info.plist
       properties:
         WKApplication: true
+        WKCompanionAppBundleIdentifier: com.cold.app
         NSHealthShareUsageDescription: "Cold reads your workout data to display your cold immersion history."
         NSHealthUpdateUsageDescription: "Cold saves your cold water immersion workouts and water temperature to Apple Health."
         WKBackgroundModes:
@@ -84,7 +96,8 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.cold.app.watchkitapp.tests
-        TEST_HOST: ""
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/ColdWatch.app/ColdWatch"
+        BUNDLE_LOADER: "$(TEST_HOST)"
 
 schemes:
   Cold:

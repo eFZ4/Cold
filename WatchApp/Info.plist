@@ -28,5 +28,7 @@
 	<array>
 		<string>workout-processing</string>
 	</array>
+	<key>WKCompanionAppBundleIdentifier</key>
+	<string>com.cold.app</string>
 </dict>
 </plist>
